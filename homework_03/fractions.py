@@ -7,6 +7,7 @@
 
 class Fraction:
     def __init__(self, counter, denominator):
+
         print ('This is the constructor of Fraction Class')
         self.counter = counter
         self.denominator = denominator
