@@ -11,11 +11,13 @@ class Cars:
     medium = []
     expensive = []
     brands = defaultdict(list)
-
+    count = 0
     filter_cars = {'slow_cars':slow_cars, 'fast_cars':fast_cars, 'sport_cars':sport_cars, 'cheap':cheap, 'medium':medium, 'expensive':expensive}
 
     def __init__(self, car_object):
         self.car_object = car_object
+        Cars.count += 1
+        self.car_object['id']= Cars.count
 
     def get_brand(self):
         Cars.brands[self.car_object['brand']].append(self.car_object)
